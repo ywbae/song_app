@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @music.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>
-  <strong>Body:</strong>
+  <strong>本文：</strong>
   <%= @music.body %>
 </p>
-
-<p>
-  <strong>Youtube url:</strong>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @music.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
-<%= link_to 'Edit', edit_music_path(@music) %> |
-<%= link_to 'Back', musics_path %>
+<%= link_to '編集', edit_music_path(@music) %> |
+<%= link_to '戻る', musics_path %>|
+<%= link_to '削除', @music, method: :delete, data: { confirm: '本当に削除しますか？' } %>

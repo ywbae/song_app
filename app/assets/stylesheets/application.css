@@ -45,11 +45,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   cursor: default;
+  max-width: 100%;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-red);
 }
 
 ul {
@@ -104,36 +104,70 @@ p {
 /* Navbar */
 #navbar {
   width: 100%;
+  padding-top: 36px;
+  padding-bottom: 36px;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
 
 .navbar__left {
   display: flex;
   align-items: center;
-  font-size: 30px;
 }
 
 .navbar__logo {
-  font-size: 30px;
+  font-size: 36px;
+  color: var(--color-red);
+  margin-right: 12px;
 }
 
 .navbar__title {
-  font-size: 40px;
+  font-size: 48px;
+  margin-right: 24px;
+}
+
+.navbar__description {
+  font-size: 20px;
+  padding-top: 20px;
 }
 
 .navbar__right {
-  color: var(--color-white);
   display: flex;
   justify-content: flex-end;
 }
 
 .navbar__right a {
   color: var(--color-white);
+  margin-left: 18px;
+  margin-top: 30px;
+}
+
+.navbar__right a:hover {
+  color: var(--color-red);
+  text-decoration: none;
 }
 
 /* Playlist */
+#playlist {
+  display: flex;
+  padding-bottom: 36px;
+}
+
+#playlist.section a {
+  color: var(--color-red);
+}
+
+.iframe-wrap {
+  border:2px solid #ccc; 
+}
+
+.iframe-wrap iframe {
+  width:200px !important;
+  height:200px;
+  border:none;
+  display:block;
+}
 
 /* Contact */
 #contact {
@@ -142,6 +176,12 @@ p {
 
 .contact__links {
   font-size: 36px;
+}
+
+.fa-github,
+.fa-youtube {
+  color: var(--color-red);
+  margin-left: 8px;
 }
 
 /* New */
