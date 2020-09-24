@@ -37,7 +37,8 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
-  background-color: black;
+  background-image: url("background.png");
+  background-size: cover;
 }
 
 body {
@@ -67,6 +68,10 @@ button {
   outline: none;
 }
 
+.section {
+  max-width: 85%;
+  margin: 0 auto;
+}
 /* Typography */
 h1 {
   font-size: var(--font-large);
