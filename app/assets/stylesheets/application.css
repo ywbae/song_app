@@ -118,8 +118,11 @@ p {
 
 .navbar__logo {
   font-size: 36px;
-  color: var(--color-red);
   margin-right: 12px;
+}
+
+.navbar__logo i {
+  color: var(--color-red);
 }
 
 .navbar__title {
@@ -216,4 +219,39 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background-color: #84d3ef;
+}
+
+/* Show */
+#playlist__show {
+  text-align: center;
+}
+
+/* Edit */
+#playlist__edit {
+  text-align: center;
+}
+
+#playlist__edit input {
+  color: var(--color-white);
+  background-color: var(--color-white);
+}
+
+/* New */
+#playlist__new {
+  text-align: center;
+}
+
+.playlist__new-btn {
+  border: 1px solid var(--color-white);
+  display: inline;
+}
+
+#playlist__new label {
+  color: var(--color-white);
+}
+
+#playlist__new textarea,
+#playlist__new input {
+  background-color: var(--color-white);
+  color: var(--color-white);
 }

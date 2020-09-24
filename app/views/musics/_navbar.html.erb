@@ -1,0 +1,20 @@
+<%# Navbar %>
+<nav id="navbar" class="section">
+  <div class="navbar__left">
+    <div class="navbar__logo">
+    <a href="/">
+      <i class="fas fa-meteor"></i>
+    </a>
+    </div>
+    <h1 class="navbar__title">PLAYLIST</h1>
+  </div>
+  <ul class="navbar__right">
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "投稿する", new_music_path, class: "post" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "post" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+    <% end %>
+  </ul>
+</nav>

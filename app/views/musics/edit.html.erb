@@ -1,6 +1,14 @@
-<h1>Editing Music</h1>
+<%= render partial: "navbar" %>
+<section id="playlist__edit">
+<h2>編集する</h2>
 
-<%= render 'form', music: @music %>
+<%= form_with(model: @music, local: true) do |form| %>
+  <%= form.text_field :body %><br>
+  <%= form.text_field :youtube_url %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
-<%= link_to 'Show', @music %> |
-<%= link_to 'Back', musics_path %>
+<%= link_to '詳細へもどる', @music %>
+</section>

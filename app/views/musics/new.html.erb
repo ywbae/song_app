@@ -1,5 +1,27 @@
-<h1>New Music</h1>
+<%= render partial: "navbar2" %>
+<section id="playlist__new">
+<h2>新しい投稿</h2>
 
-<%= render 'form', music: @music %>
+<%= form_with(model: @music, local: true) do |form| %>
 
-<%= link_to 'Back', musics_path %>
+  <div class="field">
+    <%= form.label :youtube_url %><br>
+    <%= form.text_field :youtube_url %>
+  </div>
+  <div class="field">
+    <%= form.label :本文 %><br>
+    <%= form.text_area :body %>
+  </div>
+
+
+  <div class="playlist__new-btn">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'メインへ戻る', @music %>
+</section>
+
+
+
+
