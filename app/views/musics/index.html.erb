@@ -22,10 +22,12 @@
 <%# Playlist %>
 <section id="playlist" class="section">
   <% @musics.each do |music| %>
-  <div class="iframe-wrap">
-      <iframe width=25% height=25% src="https://www.youtube.com/embed/<%=music.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <ul class="iframe-wrap">
+    <li class="iframe-wrap-list">
+    <iframe width=25% height=25% src="https://www.youtube.com/embed/<%=music.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <%= link_to '詳細', music, class:"playlist__info" %>
-  </div>
+    </li>
+  </ul>
   <% end %>
 </section>
 
