@@ -150,23 +150,29 @@ p {
 
 /* Playlist */
 #playlist {
-  display: flex;
   padding-bottom: 36px;
+  display: flex;
 }
 
 #playlist.section a {
-  color: var(--color-red);
+  color: var(--color-white);
 }
 
 .iframe-wrap {
   border:2px solid #ccc; 
+  margin: 0 auto;
+  text-align: center;
 }
 
 .iframe-wrap iframe {
-  width:200px !important;
+  width:200px;
   height:200px;
   border:none;
   display:block;
+}
+
+.playlist__info {
+  display: inline-block;
 }
 
 /* Contact */
