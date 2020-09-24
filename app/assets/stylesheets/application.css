@@ -1,15 +1,241 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  --color-red: #eb343d;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+/* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  cursor: default;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-red);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.section {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  justify-content: left;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.navbar__logo {
+  padding-right: 20px;
+  font-size: 30px;
+}
+
+.navbar__title {
+  padding-right: 20px;
+  font-size: 40px;
+}
+
+.navbar__right {
+  color: var(--color-white);
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 480px;
+}
+
+.navbar__right a {
+  padding-right: 10px;
+  color: var(--color-white);
+}
+
+/* Playlist */
+#playlist-first,
+#playlist-second {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.playlist__list {
+  display: flex;
+  width: 100%;
+}
+
+.playlist__info {
+  justify-content: center;
+}
+
+.playlist__music {
+  margin-right: 30px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.playlist__thumbnail {
+  width: 200px;
+  height: 200px;
+}
+
+.playlist__music-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist__title,
+.playlist__singer {
+  margin: 0 auto;
+}
+
+/* Contact */
+#contact {
+  text-align: right;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.contact__links {
+  font-size: 36px;
+}
+
+/* New */
+
+form input,
+form textarea {
+  width: 30%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  background-color: var(--color-white);
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  width: 15%;
+  margin-top: 30px;
+  background-color: var(--color-blue);
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #84d3ef;
+}
+
+
+#login__container,
+#registration__container,
+#new__container {
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: var(--color-black);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.field label {
+  color: var(--color-white);
+}
+
+#new__container h2 {
+  margin-bottom: 30px;
+}
+
+.home-btn a {
+  color: white;
+  margin-left: 30px;
+  border: 2px solid white;
+}
