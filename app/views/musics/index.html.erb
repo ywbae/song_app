@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-<table>
 <%# Navbar %>
 <nav id="navbar" class="section">
   <div class="navbar__left">
@@ -22,7 +21,7 @@
 </nav>
 
 <%# Playlist %>
-<section id="playlist-second" class="section">
+<section id="playlist" class="section">
   <% @musics.each do |music| %>
     <iframe width="200" height="200" src="https://www.youtube.com/embed/<%=music.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
     <%= link_to 'Show', music %>
@@ -45,7 +44,5 @@
     2020, PlayList - All rights reserved
   </p>
 </section>
-
-</table>
 
 
