@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名
+・ 音楽プレイリスト作成アプリ　「俺らのプレイリスト」
 
-Things you may want to cover:
+## アプリケーション概要
+・　みんなで音楽のプレイリストを作成します
 
-* Ruby version
+## URL
+・　デプロイ次第、公開いたします
 
-* System dependencies
+## 利用方法
+・　会員登録を行った後、ログインを行うと、「投稿する」ボタンが現れます。
+・　投稿ページで、YouTubeのコピー用URLと、本文を記載し、登録すると、メインページに表示されます
+（コピー用URL例：　https://youtu.be/gdZLi9oWNZg　）
 
-* Configuration
+## 目指した課題解決
+・　レンタカーで旅行をいく際、車内の音楽をみんなで作り上げたもので実現させたいと思いました。
+音楽の好みは人それぞれ、また思い入れもそれぞれ。
+自分が登録した楽曲が流れると、いろんな話ができて、盛り上がるのではないでしょうか？
 
-* Database creation
+## 実装予定の機能
+・　スマホアプリとしても実行が可能に
+・　YouTubeプレイリストとの互換性を持たせ、操作をより簡単に
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## データベース設計	ER図等を添付しましょう。
